@@ -1,0 +1,16 @@
+version: "3.10"
+
+services:
+  core:
+    user: root
+
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    volumes:
+        - ../:/home/Challenger/
+    ports:
+        - 8888:8888
+    restart: unless-stopped
