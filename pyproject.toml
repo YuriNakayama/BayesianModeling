@@ -23,9 +23,15 @@ classifiers = [
     "Topic :: Software Development",
 ]
 
+packages = [
+    { include = "src/*.py" },
+    { include = "src/**/*.py" },
+]
+
 [tool.poetry.dependencies]
 python = "^3.10"
 semopy = "^2.3.10"
+pytest = "^7.4.3"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
